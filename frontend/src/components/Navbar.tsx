@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
-    const router = useRouter();
     const scrollTo = (elementId: string) => {document.getElementById(elementId)?.scrollIntoView({behavior:'smooth'})};
     return (
         <AppBar position="sticky">
@@ -15,7 +13,7 @@ const Navbar = () => {
                 </Typography>
                 <Button color='inherit' onClick={() => scrollTo('about-page')}>About</Button>
                 <Button color='inherit' onClick={() => scrollTo('project-page')}>Projects</Button>
-                <Button color='inherit' onClick={() => {router.push('/contact')}}>Contact</Button>
+                <Button color='inherit' onClick={() => scrollTo('contact-page')}>Contact</Button>
             </Toolbar>
         </AppBar>
     );

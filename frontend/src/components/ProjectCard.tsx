@@ -28,11 +28,9 @@ const ProjectCard = (props: Props) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(true)
-        console.log('open')
     };
     const handleClose = () => {
         setOpen(false)
-        console.log('close')
     };
 
     return (

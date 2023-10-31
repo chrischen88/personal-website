@@ -5,6 +5,7 @@ import AboutPage from "@/components/AboutPage";
 import LandingPage from "@/components/LandingPage";
 import { useRouter } from "next/navigation";
 import ProjectPage from "@/components/ProjectPage";
+import ContactPage from "@/components/ContactPage";
 
 const HomePage = () => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const HomePage = () => {
       <LandingPage />
       <AboutPage />
       <ProjectPage />
+      <ContactPage />
     </>
   );
 };
