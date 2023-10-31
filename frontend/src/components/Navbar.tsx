@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
@@ -14,7 +14,7 @@ const Navbar = () => {
                     chrsschnn.me
                 </Typography>
                 <Button color='inherit' onClick={() => scrollTo('about-page')}>About</Button>
-                <Button color='inherit' onClick={() => {router.push('/projects')}}>Projects</Button>
+                <Button color='inherit' onClick={() => scrollTo('project-page')}>Projects</Button>
                 <Button color='inherit' onClick={() => {router.push('/contact')}}>Contact</Button>
             </Toolbar>
         </AppBar>
