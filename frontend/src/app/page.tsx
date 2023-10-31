@@ -1,22 +1,28 @@
-import { makeStyles, Theme } from "@mui/material";
+"use client";
 import React from "react";
-import { Avatar, Box, Container, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Toolbar, Button, AppBar, Typography } from "@mui/material";
+import AboutPage from "@/components/AboutPage";
+import LandingPage from "@/components/LandingPage";
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
+  const router = useRouter();
   return (
-    <Container sx={{display: 'flex', flexDirection:"row", alignItems:"center", justifyContent:"center", height:"90vh"}}>
-      <Box>
-        <Avatar alt="Christopher Chen" src="/pic_of_me.jpg" sx={{width:"20vh", height:"20vh"}} />
-      </Box>
-      <Box sx={{display: 'flex', flexDirection:"column", px: 4}}>
-        <Typography variant="h3" component="h1" mt={2}>
-          Christopher Chen
-        </Typography>
-        <Typography variant="h5" component="h1" mt={2}>
-          Software Engineer
-        </Typography>
-      </Box>
-    </Container>
+    <>
+      {/* <AppBar position="sticky">
+          <Toolbar>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                  chrsschnn.me
+              </Typography>
+              <Button color='inherit' onClick={() => {router.push('/about')}}>About</Button>
+              <Button color='inherit' onClick={() => {router.push('/resume')}}>Resume</Button>
+              <Button color='inherit' onClick={() => {router.push('/projects')}}>Projects</Button>
+              <Button color='inherit' onClick={() => {router.push('/contact')}}>Contact</Button>
+          </Toolbar>
+      </AppBar> */}
+      <LandingPage />
+      <AboutPage />
+    </>
   );
 };
 
