@@ -6,11 +6,13 @@ import LandingPage from "@/components/LandingPage";
 import { useRouter } from "next/navigation";
 import ProjectPage from "@/components/ProjectPage";
 import ContactPage from "@/components/ContactPage";
+import Navbar from "@/components/Navbar";
 
 const HomePage = () => {
   const router = useRouter();
   return (
     <>
+      <Navbar />
       <LandingPage />
       <AboutPage />
       <ProjectPage />

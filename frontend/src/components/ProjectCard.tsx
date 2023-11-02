@@ -1,5 +1,6 @@
 "use client";
 import { Box, Button, Card, CardContent, Grid, Modal, Tooltip, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Props {
@@ -25,6 +26,7 @@ const modalStyle = {
 }
 
 const ProjectCard = (props: Props) => {
+    const router = useRouter();
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(true)
@@ -66,7 +68,7 @@ const ProjectCard = (props: Props) => {
                         </Grid>
                         {props.projDemo ? 
                         <Grid item xs={6} sx={{display:'flex', justifyContent:"center"}}>
-                            <Button>Check out the Demo!</Button>
+                            <Button onClick={() => {props.projDemo?router.push(props.projDemo):null}}>Check out the Demo!</Button>
                         </Grid> : null}
                     </Grid>
                 </Box>
