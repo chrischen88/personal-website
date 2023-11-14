@@ -7,7 +7,7 @@ import ProjectCard from "@/components/ProjectCard";
 
 const ProjectPage = () => {
     return (
-        <Container id='project-page' sx={{display: 'flex', flexDirection:"column", alignItems:"center", justifyContent:"center", height:"90vh", mt:10}}>
+        <Container id='project-page' sx={{display: 'flex', flexDirection:"column", alignItems:"center", justifyContent:"center", height:"93vh", pt:'10vh'}}>
             <Box sx={{display: 'flex', justifyContent: 'center', pb:5}}>
                 <Typography variant='h3'>Some Personal Projects</Typography>
             </Box>
@@ -15,7 +15,7 @@ const ProjectPage = () => {
                 <Grid container sx={{overflow:'auto', height:'65vh'}}>
                     {projects.map((project) => {
                         return (
-                            <Grid item xs={4} key={project.title} sx={{p:2}}>
+                            <Grid item xs={12} md={4} key={project.title} sx={{p:2}}>
                                 <ProjectCard
                                     projTitle={project.title}
                                     projThumb={project.thumbnail}

@@ -13,7 +13,6 @@ const ResultsPage = () => {
     const isWithinRange = Math.abs(Number(apiResponse['prediction']) - Number(apiResponse['price'])) < 186
     const isCheaper = Number(apiResponse['prediction']) - 186 > Number(apiResponse['price'])
     const router = useRouter();
-    console.log(apiResponse);
     return (
         <Container component="main" maxWidth="md">
             <CssBaseline/>

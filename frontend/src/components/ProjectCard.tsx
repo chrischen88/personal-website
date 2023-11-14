@@ -18,7 +18,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '30vw',
+    width: {xs:'70%', md:'50%'},
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
@@ -50,10 +50,10 @@ const ProjectCard = (props: Props) => {
             </Card>
             <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
                 <Box sx={modalStyle}>
-                    <Typography variant='h5' sx={{pb:2}}>{props.projTitle}</Typography>
-                    <Typography variant='body1'>{props.projFullDesc}</Typography>
+                    <Typography variant='h5' sx={{pb:2}} fontSize='1.3rem'>{props.projTitle}</Typography>
+                    <Typography variant='body1' fontSize='0.9rem'>{props.projFullDesc}</Typography>
                     <br/>
-                    <Typography variant='subtitle1' color='text.secondary'>Tools: {props.projTools}</Typography>
+                    <Typography variant='subtitle1' color='text.secondary' fontSize='0.75rem'>Tools: {props.projTools}</Typography>
                     <br/>
                     <Grid container spacing={2} sx={{display: 'flex', justifyContent:'right'}}>
                         <Grid item xs={6} sx={{display:'flex', justifyContent:"center"}}>

@@ -51,7 +51,7 @@ const AttributeForm = () => {
                             onChange={handleChange}
                         />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <TextField
                             fullWidth
                             id="bedrooms"
@@ -61,7 +61,7 @@ const AttributeForm = () => {
                             onChange={handleChange}
                         />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <TextField
                             fullWidth
                             id="bathrooms"
@@ -71,7 +71,7 @@ const AttributeForm = () => {
                             onChange={handleChange}
                         />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <TextField
                             fullWidth
                             id="sqft"
@@ -81,7 +81,7 @@ const AttributeForm = () => {
                             onChange={handleChange}
                         />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <TextField
                             fullWidth
                             id="price"
@@ -107,7 +107,7 @@ const AmenityForm = () => {
             <Box sx={{my: 5}}>
                 <Grid container spacing={2}>
                     {attributes.map(({attr, label}) => (
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <FormControl sx={{px:3}}>
                                 <FormLabel>{label}</FormLabel>
                                 <RadioGroup
@@ -168,19 +168,19 @@ const ConfirmForm = () => {
                         <Typography variant="h5">Address</Typography>
                         <Typography>{formValues.address ? formValues.address : "N/A"}</Typography>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <Typography variant="h5">Bedrooms</Typography>
                         <Typography>{formValues.bedrooms}</Typography>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <Typography variant="h5">Bathrooms</Typography>
                         <Typography>{formValues.bathrooms}</Typography>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <Typography variant="h5">Square Feet</Typography>
                         <Typography>{formValues.sqft}</Typography>
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={6} md={3}>
                         <Typography variant="h5">Monthly Rent</Typography>
                         <Typography>{formValues.price}</Typography>
                     </Grid>
@@ -188,7 +188,7 @@ const ConfirmForm = () => {
                         <Typography variant="h5"><b>Amenities</b></Typography>
                     </Grid>
                     {attributes.map(({attr, label}) => (
-                        <Grid item xs={6}>
+                        <Grid item xs={12} md={6}>
                             <Typography variant="h6">{label}</Typography>
                             <Typography>{formValues[attr as keyof typeof formValues] == 1 ? 'Yes✅' :
                                         formValues[attr as keyof typeof formValues] == 0 ? "No❌" : "Not Sure🤷‍♂️"}

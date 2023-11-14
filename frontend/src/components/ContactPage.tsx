@@ -8,7 +8,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 const ContactPage = () => {
     return (
-        <Container id='contact-page' sx={{display: 'flex', flexDirection:"row", alignItems:"center", justifyContent:"center", height:"90vh"}}>
+        <Container id='contact-page' sx={{display: 'flex', flexDirection:"row", alignItems:"center", justifyContent:"center", height:"93vh", mt:"10vh"}}>
             <Grid container spacing={3}>
                 <Grid item xs={12} sx={{display:'flex', justifyContent:'center'}}>
                     <Typography variant='h2'>Want to Connect?</Typography>
